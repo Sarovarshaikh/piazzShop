@@ -1,0 +1,160 @@
+body {
+    background: darksalmon;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+  
+/* .fill {
+    background-image: url('https://source.unsplash.com/random/150x150');
+    position: relative;
+    height: 150px;
+    width: 150px;
+    top: 5px;
+    left: 5px;
+    cursor: pointer;
+}
+  
+.hold {
+    border: solid 5px #ccc;
+}
+  
+.empty {
+    display: inline-block;
+    height: 160px;
+    width: 160px;
+    margin: 10px;
+    border: solid 3px salmon;
+    background: white;
+}
+  
+.hovered {
+    background: #f4f4f4;
+    border-style: dashed;
+} */
+/* new css */
+/* .draggable-elements {
+	display: flex;
+	justify-content: left;
+	margin: 2rem;
+    flex-direction: column;
+} */
+.draggable {
+	height: 5rem;
+	width: 5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 4rem;
+	margin: 0rem 0.5rem;
+	cursor: move;
+	transition: opacity 0.2s;
+}
+section{
+    width: 1000px;
+    height: 360px;
+    margin: 5px auto;
+    display: flex;
+    justify-content: space-around;
+
+}
+h1{
+    text-align: center;
+}
+
+div.homeDec{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding: 10px 20px;
+    background-color: aliceblue;
+}
+.author::first-letter{
+    height: 200px;
+    color: cyan;
+    font-style: italic;
+}
+ 
+.author{
+    background-image: linear-gradient( to left, rgba(212, 255, 0, 0.904),rgba(244, 98, 28 ));
+
+}
+.dlBoy img{
+    
+}
+.delivery{
+    padding: 10px;
+}
+.cookingImg{
+    position: relative;
+    animation-name: sarwar;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transition-duration: 2s;
+    
+}
+
+@keyframes sarwar {
+    from{
+        left:0px;
+    }
+    to{
+        left: 100px;
+    }
+}
+.foodDel{
+    position: relative;
+    animation-name: shaikh;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    transition-duration: 2s; 
+    width: 100px;
+}
+@keyframes shaikh {
+    from{
+        left:0px;
+    }
+    to{
+        left: 100%;
+    }
+}
+.roadImg {
+    position: relative;
+    top: -56px;
+    z-index: -1;
+    /* width: 100; */
+    width: 100%;
+    height: 119px;
+}
+.homeDec img{
+    width: 100px;
+    height: 100px;
+}
+div.choice {
+    display: flex;
+    width: 306px;
+    height: 300px;
+    padding: 43px;
+    margin: 10px;
+    background-color: #fafafa;
+    box-sizing: border-box;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+}
+.inGrei{
+    width: 40px;
+    height: 40px;
+
+}
+.inGreiMain{
+    width: 80px;
+    height: 80px;
+}
+
+@media only screen and(max-width:600px) {
+    div{
+        width: 100%;
+    }
+}

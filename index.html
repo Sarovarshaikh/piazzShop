@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Drag & Drop Using Pure Javascript</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+       <div class="homeDec">
+        <h1><img src="./cooking.png" alt="" class="cookingImg"> </h1>
+        <h1>Welcome To Pizza Shop </h1>
+        <h1 class="author"> Sarovar Shiakh </h1>
+       </div>
+       <div class="delivery">
+        <div class="dlBoy">
+            <img src="./food-delivery.png" alt="" class="foodDel">
+            <img src="./road.png" alt="" class="roadImg">
+        </div>
+       </div>
+       <section>
+        <div class="choice">
+            <!-- <p draggable="true" class="">one</p>
+            <p draggable="true" class="">one</p>
+            <p draggable="true" class="">one</p>
+            <p draggable="true" class="">one</p>
+            <p draggable="true" class="">one</p> -->
+            <img src="https://i.ibb.co/gzs3hTn/pizza-base2.png" alt="" draggable="true" class="inGreiMain">
+            <img src="https://i.ibb.co/KjBXVdC/pizza-base1.png" alt="" draggable="true" class="inGreiMain">
+            <img src="chicken.png" alt="" draggable="true" class="inGrei">
+            <img src="spicy.png" alt="" draggable="true" class="inGrei">
+            <img src="onion.png" alt="" draggable="true" class="inGrei">
+        </div>
+        <div class="choice"></div>
+        <div class="choice"></div>
+       </section>
+       <script>
+        var img = document.getElementsByTagName('img')
+        var choice = document.getElementsByClassName('choice');
+        var dragItem = null;
+
+        for(var i of img){
+            i.addEventListener('dragstart',dragStart);
+            i.addEventListener('dragend',dragEnd)
+
+        }
+
+        function dragStart(){
+            dragItem = this;
+            setTimeout(()=>this.style.display = "none", 0)
+        }
+        function dragEnd(){
+            
+            setTimeout(()=>this.style.display = "block", 0)
+            dragItem = null;
+        }
+        for(var j of choice){
+            j.addEventListener('dragover', dragOver)
+            j.addEventListener('dragenter', dragEnter)
+            j.addEventListener('dragleave', dragLeave)
+            j.addEventListener('drop', Drop)
+        }
+        function Drop(){
+            this.append(dragItem)
+        }
+        function dragOver(e){
+            e.preventDefault()
+            this.style.border = "5px dotted cyan";
+          
+        }
+        function dragEnter(e){
+            e.preventDefault()
+            this.style.border = "none"
+            this.choice.classList.add('bg-blue', 'text-white');
+        }
+        function dragLeave(e){
+            this.style.border = "none";
+           
+        }
+       </script>
+    </body>
+</html>
